@@ -1,27 +1,7 @@
 import { Module } from "vuex";
 import { RootState } from "../index";
 import axios from "axios";
-
-export interface StopRecord {
-  line: number;
-  stop: string;
-  order: number;
-  time: string;
-}
-
-export interface BusStop {
-  stop: string;
-  order: number;
-}
-
-export interface BusState {
-  stopsData: StopRecord[];
-  selectedLine: number | null;
-  selectedStop: string | null;
-  isLoading: boolean;
-  error: string | null;
-  sortAsc: boolean;
-}
+import { BusState, BusStop, StopRecord } from "@/types/bus";
 
 export const bus: Module<BusState, RootState> = {
   namespaced: true,

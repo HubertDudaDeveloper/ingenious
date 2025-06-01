@@ -52,7 +52,7 @@ const handleClick = (line: string) => {
   }
 
   &-button {
-    width: 52px;
+    width: 54px;
     height: 32px;
     background-color: $color-button-active;
     color: $color-white;

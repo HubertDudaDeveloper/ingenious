@@ -3,6 +3,7 @@
 $color-heading-text: rgba(26, 26, 26, 1);
 $color-tab-text-active: rgba(51, 55, 60, 1);
 $color-tab-text-inactive: rgba(154, 157, 164, 1);
+$color-placeholder-text: rgba(99, 102, 110, 1);
 
 // Background
 
@@ -18,10 +19,12 @@ $color-button-selected: rgba(46, 62, 110, 1);
 // Border
 
 $color-dashed-border: rgba(154, 157, 164, 1);
+$color-border-label: rgba(226, 228, 234, 1);
 $color-border-list: rgba(243, 244, 249, 1);
 $color-tab-border-active: rgba(25, 82, 225, 1);
-
 
 // Select
 
 $color-time-select-hover: rgba(248, 248, 251, 1);
+
+$color-error: red;

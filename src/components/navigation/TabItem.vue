@@ -1,26 +1,29 @@
 <template>
-  <router-link class="tab-item" :class="{isTabActive: 'tab-item__active'}" :to="path">
+  <router-link
+    class="tab-item"
+    :class="{ 'tab-item__active': isTabActive }"
+    :to="path"
+  >
     {{ label }}
   </router-link>
 </template>
 
 <script setup lang="ts">
-import { defineProps, computed } from 'vue';
+import { defineProps, computed } from "vue";
 
 interface ITabItem {
-  label: string, 
-  path: string,
+  label: string;
+  path: string;
 }
 
 const props = defineProps<ITabItem>();
 
-const isTabActive = computed(() => props.label === props.activeTab)
-
+const isTabActive = computed(() => props.label === props.activeTab);
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/styles/__colors.scss' as *;
-@use '@/assets/styles/__typography.scss' as *;
+@use "@/assets/styles/__colors.scss" as *;
+@use "@/assets/styles/__typography.scss" as *;
 
 .tab-item {
   display: flex;
@@ -35,8 +38,6 @@ const isTabActive = computed(() => props.label === props.activeTab)
   &.router-link-active {
     color: $color-tab-text-active;
     box-shadow: inset 0 -2px $color-tab-border-active;
-    
   }
 }
-
 </style>
